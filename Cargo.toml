@@ -1,0 +1,8 @@
+[package]
+name = "iouring-simple"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+io-uring = "0.7.4"
+vmm-sys-util = "0.12.1"
