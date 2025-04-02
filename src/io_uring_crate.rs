@@ -11,6 +11,7 @@ use vmm_sys_util::{
     eventfd::EventFd,
 };
 
+#[allow(dead_code)]
 pub fn do_io() -> io::Result<()> {
     let mut ring = IoUring::new(512)?;
     let eventfd = EventFd::new(0)?;

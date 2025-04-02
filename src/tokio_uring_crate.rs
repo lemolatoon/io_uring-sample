@@ -65,6 +65,7 @@ pub async fn await_on_eventfd(eventfd: &AsyncFd<EventFd>) -> io::Result<()> {
     Ok(())
 }
 
+#[allow(dead_code)]
 async fn task() -> io::Result<()> {
     let eventfd = EventFd::new(0)?;
     let eventfd2 = eventfd.try_clone()?;
@@ -172,6 +173,7 @@ async fn task() -> io::Result<()> {
     Ok(())
 }
 
+#[allow(dead_code)]
 pub fn do_io() -> io::Result<()> {
     tokio_uring::builder().entries(512).start(task()).unwrap();
     Ok(())

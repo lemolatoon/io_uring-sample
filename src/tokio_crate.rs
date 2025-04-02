@@ -110,6 +110,7 @@ async fn task() -> io::Result<()> {
     Ok(())
 }
 
+#[allow(dead_code)]
 pub fn do_io() -> io::Result<()> {
     let runtime = tokio::runtime::Builder::new_multi_thread()
         .worker_threads(4)
